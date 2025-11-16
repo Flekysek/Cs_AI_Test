@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macek/Programs/RiderProjects/Cs_AI_Shit/Practice/Practice/Practice.csproj": {}
+    "/Users/macek/Programs/RiderProjects/Cs_AI_Test/Practice/Practice/Practice.csproj": {}
   },
   "projects": {
-    "/Users/macek/Programs/RiderProjects/Cs_AI_Shit/Practice/Practice/Practice.csproj": {
+    "/Users/macek/Programs/RiderProjects/Cs_AI_Test/Practice/Practice/Practice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macek/Programs/RiderProjects/Cs_AI_Shit/Practice/Practice/Practice.csproj",
+        "projectUniqueName": "/Users/macek/Programs/RiderProjects/Cs_AI_Test/Practice/Practice/Practice.csproj",
         "projectName": "Practice",
-        "projectPath": "/Users/macek/Programs/RiderProjects/Cs_AI_Shit/Practice/Practice/Practice.csproj",
+        "projectPath": "/Users/macek/Programs/RiderProjects/Cs_AI_Test/Practice/Practice/Practice.csproj",
         "packagesPath": "/Users/macek/.nuget/packages/",
-        "outputPath": "/Users/macek/Programs/RiderProjects/Cs_AI_Shit/Practice/Practice/obj/",
+        "outputPath": "/Users/macek/Programs/RiderProjects/Cs_AI_Test/Practice/Practice/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macek/.nuget/NuGet/NuGet.Config"

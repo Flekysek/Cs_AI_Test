@@ -1,0 +1,56 @@
+﻿@page
+@model FoodAI.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Food AI</h1>
+    <p>Enter URLs to scrape food information and chat with the AI.</p>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="urls">Enter URLs (one per line):</label>
+            <textarea class="form-control" id="urls" name="urls" rows="5">@Model.UrlsInput</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Scrape and Process</button>
+    </form>
+
+    @if (Model.FoodItems != null && Model.FoodItems.Any())
+    {
+        <h2>Scraped Food Items</h2>
+        <ul class="list-group">
+            @foreach (var item in Model.FoodItems)
+            {
+                <li class="list-group-item">
+                    <strong>@item.Name</strong> - @item.Price.ToString("C")
+                    <p>@item.Description</p>
+                    <small>Source: <a href="@item.SourceUrl" target="_blank">@item.SourceUrl</a></small>
+                </li>
+            }
+        </ul>
+    }
+
+    <hr />
+
+    <h2>Chat with Food AI</h2>
+    <div id="chat-window" class="border p-3 mb-3" style="height: 300px; overflow-y: scroll;">
+        @if (Model.ChatMessages != null)
+        {
+            @foreach (var message in Model.ChatMessages)
+            {
+                <div class="@(message.Role == "user" ? "text-right" : "text-left")">
+                    <strong>@(message.Role == "user" ? "You" : "AI"):</strong> @message.Content
+                </div>
+            }
+        }
+    </div>
+    <form method="post" asp-page-handler="Chat">
+        <div class="input-group">
+            <input type="text" class="form-control" name="chatInput" placeholder="Type your message..." />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-success">Send</button>
+            </div>
+        </div>
+    </form>
+</div>

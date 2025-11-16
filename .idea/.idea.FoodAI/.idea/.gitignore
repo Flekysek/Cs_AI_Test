@@ -1,0 +1,15 @@
+/shelf/
+/workspace.xml
+
+# Rider
+/contentModel.xml
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.FoodAI.iml
+
+# Editor-based HTTP Client 
+/httpRequests/
+
+# Datasource local storage
+/dataSources/
+/dataSources.local.xml
