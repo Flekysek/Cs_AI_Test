@@ -30,9 +30,6 @@ COPY Web/.env ./.env
 # This is a placeholder, a more robust solution might involve a separate entrypoint script
 # HEALTHCHECK --interval=5s --timeout=3s --retries=5 CMD mongosh --eval 'db.runCommand("ping").ok' || exit 1
 
-# Optional: Copy your Google Cloud service account key file if you are using GOOGLE_APPLICATION_CREDENTIALS
-# Make sure to update the path if your key file is located elsewhere
-# COPY service-account-key.json /app/service-account-key.json
 
 # Expose the port the app runs on
 EXPOSE 8080
